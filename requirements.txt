@@ -1,0 +1,18 @@
+# Core data science
+pandas
+numpy
+scipy
+
+# Machine learning
+scikit-learn
+joblib
+
+# Data fetching / APIs
+requests
+python-dotenv
+
+# Feature engineering / data format
+pyarrow
+
+# Feature store
+hopsworks
