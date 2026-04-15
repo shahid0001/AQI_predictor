@@ -1,0 +1,32 @@
+name: AQI Ingestion Pipeline
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ingestion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run ingestion
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          HOPSWORKS_KEY: ${{ secrets.HOPSWORKS_KEY }}
+          LAT: 28.4212
+          LON: 70.2989
+        run: python -m ingestion.ingestion
