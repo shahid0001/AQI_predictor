@@ -6,5 +6,5 @@ python-dotenv
 pyarrow
 
 hopsworks==4.7.*
-hops-deltalake==0.0.19
+hops-deltalake==1.4.0
 
