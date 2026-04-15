@@ -1,18 +1,10 @@
-# Core data science
 pandas
 numpy
-scipy
-
-# Machine learning
 scikit-learn
-joblib
-
-# Data fetching / APIs
 requests
 python-dotenv
-
-# Feature engineering / data format
 pyarrow
 
-# Feature store
-hopsworks
+hopsworks==4.7.*
+hops-deltalake==0.0.19
+
