@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ✅ CACHE PIP (VERY IMPORTANT)
+      # CACHE PIP (VERY IMPORTANT)
       - name: Cache pip
         uses: actions/cache@v4
         with:
