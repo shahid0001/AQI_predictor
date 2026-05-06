@@ -11,7 +11,7 @@ def fetch_data():
 
     # Feature groups
     historical_fg = fs.get_feature_group("aqi_historical", 1)
-    realtime_fg = fs.get_feature_group("aqi_raw_data", 2)
+    realtime_fg = fs.get_feature_group("aqi_raw_data", 1)
 
     # 🔍 Separate checks
     if historical_fg is None:
